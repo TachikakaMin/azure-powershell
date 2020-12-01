@@ -1,3 +1,40 @@
+## 5.2.0 - December 2020
+#### Az.Accounts
+* Managed to parse ExpiresOn time from raw token if could not get from underlying library
+* Improved warning message if Interactive authentication is unavailable
+
+#### Az.ApiManagement
+* [Breaking change] 'New-AzApiManagementProduct' by default has no subscription limit.
+
+#### Az.Compute
+* Edited Get-AzVm to filter by '-Name' prior to checking for throttling due to too many resources. 
+* New cmdlet 'Start-AzVmssRollingExtensionUpgrade'.
+
+#### Az.ContainerRegistry
+* Supported parameter 'Name' for and value from pipeline input for 'Get-AzContainerRegistryUsage' [#13605]
+* Polished exceptions for 'Connect-AzContainerRegistry'
+
+#### Az.DataFactory
+* Updated ADF .Net SDK version to 4.13.0
+
+#### Az.HealthcareApis
+* Added support for customer managed keys
+
+#### Az.IotHub
+* Fixed an issue of SAS token.
+
+### Thanks to our community contributors
+* Andrew Dawson (@dawsonar802), Update Get-AzKeyVaultCertificate.md - Get cert and save it as pfx section to work with PowerShell Core (#13557)
+* @iviark, Healthcare APIs Powershell BYOK Updates (#13518)
+* John Duckmanton (@johnduckmanton), Correct spelling of TagPatchOperation (#13508)
+* Michael James (@mikejwhat)
+  * Get-AzLogicAppRunHistory Help Tidy (#13513)
+* Richard de Zwart (@mountain65)
+  * Update Update-AzAppConfigurationStore.md (#13485)
+  * Update New-AzCosmosDBAccount.md (#13490)
+* @SteppingRazor, New-AzApiManagementProduct: Change SubscriptionsLimit parameter default value to None (#13457)
+* Steve Burkett (@SteveBurkettNZ), Fix Typo for WorkspaceResourceId parameter in example (#13589)
+
 ## 5.1.0 - November 2020
 #### Az.Accounts
 * Fixed an issue that TenantId may be not respected if using 'Connect-AzAccount -DeviceCode'[#13477]
